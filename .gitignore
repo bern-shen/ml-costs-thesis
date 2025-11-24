@@ -2,6 +2,7 @@
 *.csv
 *.txt
 data/
+!data/.gitkeep
 sources/
 
 # Python caches
