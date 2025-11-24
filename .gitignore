@@ -1,0 +1,15 @@
+# Data files
+*.csv
+*.txt
+data/
+sources/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
