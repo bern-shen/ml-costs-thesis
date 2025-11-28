@@ -1,10 +1,10 @@
 # Testing ML Return Forecasts Under Transaction Costs
 
 **Author:** Bernard Shen  
-**Status:** Senior Thesis (In Progress - MVP Phase)
+**Status:** Personal Research Project (Active Development)
 
-## Research Objective
-This project investigates the "Paper vs. Practice" gap in quantitative finance. Specifically, it asks whether the superior statistical predictive power ($R^2$, MSE) often observed in Machine Learning models (LASSO, Neural Networks) translates into realizable economic value (Net Sharpe Ratio) once realistic transaction costs are applied.
+## Project Overview
+This project explores the "Paper vs. Practice" gap in quantitative finance. Specifically, it examines whether the superior statistical predictive power ($R^2$, MSE) often observed in Machine Learning models (LASSO, Neural Networks) translates into realizable economic value (Net Sharpe Ratio) once realistic transaction costs are applied.
 
 ## Methodology
 * **Prediction Models:** Training LASSO and Neural Networks on a rolling window of monthly-lagged features (consistent with Gu, Kelly & Xiu, 2020) to forecast S&P 500 stock returns.
@@ -16,14 +16,15 @@ This repository contains the code necessary to reproduce the data pipeline and s
 
 * **`02_ml_transaction_costs.ipynb` (MVP):**
     * This notebook represents a **lean Proof of Concept (POC)**.
-    * It implements the end-to-end pipeline for the LASSO model to demonstrate feasibility.
-    * *Note:* It does not yet include the Neural Network models, full benchmark comparisons ($1/N$), or the comprehensive data analysis planned for the final thesis.
+    * It implements the end-to-end pipeline for the LASSO model to demonstrate the core strategy.
+    * *Note:* It does not yet include the Neural Network models, full benchmark comparisons ($1/N$), or the comprehensive data analysis planned for future iterations.
 
 * **`fundamental_models.py` (Legacy):**
     * Contains class definitions for fundamental econometric models (ARMA, VAR, GARCH).
-    * *Note:* These files are from a previous iteration of the project. They are **deprecated** and not currently used in the active Machine Learning thesis workflow.
+    * *Note:* These files are from a previous iteration of the project. They are **deprecated** and not currently used in the active machine learning workflow.
 
-* **`preprocessing.ipynb`:** * The active ETL pipeline that merges proprietary CRSP/Compustat data and generates predictive features.
+* **`preprocessing.ipynb`:**
+    * The active ETL pipeline that merges proprietary CRSP/Compustat data and generates predictive features.
 
 ## Preliminary Findings (MVP)
 Initial backtests using the LASSO model at a simulated **$1B AUM** indicate:
